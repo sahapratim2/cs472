@@ -40,4 +40,7 @@ ul.number{
 .italic{
     font-style: italic;
 }
+.image{
+    height: 200px;
+}
 
