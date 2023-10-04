@@ -15,28 +15,34 @@ body{
    font-size: 15pt;
    font-family: cursive;
 }
-a{
+.mainPoint::first-letter
+{
+    font-size: 3rem;
+    float: left;
+    line-height: 1;
+}
+a, dl dt{
     color: yellow;
+    text-decoration: none !important;
 }
 a:link{
     color: red;
+    text-decoration: none !important;
 }
 a:visited {
      color: #00FF00; 
+     text-decoration: none !important;
     }
 a:hover { 
     color: #FF00FF; 
+    text-decoration: none !important;
 }
 a:active { 
     color: #0000FF; 
+    text-decoration: none !important;
 }
 
-ul.disk{
-    list-style-type: disc; 
-}
-ul.number{
-    list-style-type:decimal; 
-}
+
 .italic{
     font-style: italic;
 }
@@ -44,3 +50,7 @@ ul.number{
     height: 200px;
 }
 
+ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
