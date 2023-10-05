@@ -1,6 +1,7 @@
 
 body{
     color: rgb(44, 41, 41);
+
 }
 
 * {
@@ -166,10 +167,12 @@ body{
 
     footer{
       background-color:var(--second-bg-color);
+      padding: 10px;
     }
 
     footer div
     {
       float: left;
+  
     }
   

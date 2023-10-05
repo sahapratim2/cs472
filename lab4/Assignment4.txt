@@ -1,0 +1,33 @@
+For this Lab Assignment 4, do the following tasks:
+
+1. Implement code for a web page that displays the attached Web Form (file named, webform1.PNG).
+
+2. In your html form markup code from task 1, include a feature such that the User can only submit the form if the Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter).
+
+3. Add to your above web form, an additional text input field, where the user must only enter a website url, and they must enter it beginning with either the string, "http://" or "https://".
+
+4. Implement code for another web page that displays as shown in the attached image including the navbar and the Web Form (file named, Webform2.PNG).
+
+5. Push above pages to the GitHub.
+
+Note. no need to insert validators. 
+
+Grading rubric for this HTML form homework:
+
+Is the page appearance close to the specified image? is Layout matched?
+
+Is the page linked on the website with link on their homepage?
+
+are the regular expressions defined and worked?
+
+Is the CSS code neat and orderly--not a lot of redundancy?
+
+No styling in the HTML file - Separation of concerns principle was followed?
+
+Scoring:  10 if all but one of the above are not satisfied
+
+9 if 2  are not satisfied
+
+8 if 3 or more not satisfied, but page renders generally ok
+
+7 if submitted something that shows genuine effort but weak results

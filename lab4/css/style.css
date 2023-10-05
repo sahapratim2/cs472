@@ -1,0 +1,23 @@
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: white;
+    border-left: white solid .1rem;
+    padding: 0 2rem;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+}
+
+.form-group-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+
+  footer div
+  {
+    float: left;
+  }
