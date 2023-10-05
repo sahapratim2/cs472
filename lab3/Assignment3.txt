@@ -1,0 +1,28 @@
+Instructions
+For this lab assignment, you are required to implement the CSHelpDesk-Login-webpage as shown in the attached png file. 
+
+After you finish your implementation, upload your code to your GitHub repository/website and add a link for it on your homepage. Create folders for images and css separately and store corresponding files in it.   
+
+For submission: 
+
+Include: 
+
+1. URL of the GitHub repository/folder containing the code implementation.
+
+2. URL of the published webpage on github.io
+
+Grading rubric for this CSS Layout Homework:
+
+Is the page appearance close to the specified image?
+  - Layout is matched. (No bootstrap)
+  - centered banner content area
+  - image branding and navigation links on top - with branding left justified and nav right justified
+Is the page linked on your website with link on your homepage?
+Are the HTML and CSS validators present and do they succeed?
+Is the CSS code neat and orderly--not a lot of redundancy?
+No styling in the HTML file - Separation of concerns principle was followed?
+ 
+Scoring:  10 if all but one of the above are satisfied
+9 if 2  are not satisfied
+8 if 3 or more not satisfied, but page renders generally ok
+7 if submitted something that shows genuine effort but weak results
