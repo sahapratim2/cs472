@@ -12,10 +12,12 @@ describe("array", function(){
 
 describe("array", function(){
     it("findBooks('The')", function(){
-            chai.expect(findBooks('The')).to.include.deep.members([
-            { title: "The Road Ahead", author: "Bill Gates", libraryID: 1235 },
-            { title: "The Road Ahead", author: "Bill Gates", libraryID: 4268 },
-            { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3257 }
-           ])
+            chai.expect(findBooks('The')).to.include.deep.members(
+                [
+                    { title: "The Road Ahead", author: "Bill Gates", libraryID: 1235 },
+                    { title: "The Road Ahead", author: "Bill Gates", libraryID: 4268 },
+                    { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3257 }
+                 ]
+            )
     })
 })
