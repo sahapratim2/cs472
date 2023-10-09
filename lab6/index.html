@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0147)https://sakai.cs.miu.edu/access/content/attachment/1178edb6-77d7-4c1e-85ea-12257d711b1e/Assignments/04600bc3-82c8-448c-9d7d-2bd8974709dc/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="./index_files/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="./index_files/mocha.js.download"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="./index_files/chai.js.download"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+    <!-- your js file -->
+    <script src="./script/script.js"></script>
+
+    <!-- the script with tests (describe, it...) -->
+    <script src="./script/scripttest.js"></script>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>0</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>0</em></li><li class="duration">duration: <em>0</em>s</li></ul><ul id="mocha-report"></ul></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+
+</body></html>
