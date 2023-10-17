@@ -6,6 +6,12 @@ document.getElementById("btnRegisterPatient").addEventListener("click", function
     table.appendChild(tr);
     event.preventDefault()
 });
+document.getElementById("chkElderlyPatients").addEventListener("click", function () {
+    displayPatients();
+});
+document.getElementById("chkShowOutPatients").addEventListener("click", function () {
+    displayPatients();
+});
 
 function createTD(value) {
     let td = document.createElement('td');
@@ -34,31 +40,6 @@ function getPatientsInfo() {
     patientsInfo.push(getOutpatient());
     return patientsInfo;
 }
-document.getElementById("chkElderlyPatients").addEventListener("click", function () {
-    displayPatients();
-});
-document.getElementById("chkShowOutPatients").addEventListener("click", function () {
-    displayPatients();
-});
-
-function getAge(dateOfBirth) {
-    if (dateOfBirth != null && dateOfBirth != '') {
-        let dob = new Date(dateOfBirth);
-        let yearDob = dob.getFullYear();
-        let monthDob = dob.getMonth() + 1;
-        let dayDob = dob.getDate();
-
-        let yearNow = new Date().getFullYear();
-        let monthNow = new Date().getMonth() + 1;
-        let dayNow = new Date().getDate();
-        if (monthNow === monthDob && dayNow < dayDob || monthNow < monthDob) {
-            return yearNow - yearDob - 1;
-        } else {
-            return yearNow - yearDob;
-        }
-    }
-};
-
 function displayPatients()
 {
     let elderlyPatients=document.getElementById("chkElderlyPatients").checked;
@@ -105,7 +86,22 @@ function displayPatients()
         {
             tr.className=""; 
         }
-
     }
+}
+function getAge(dateOfBirth) {
+    if (dateOfBirth != null && dateOfBirth != '') {
+        let dob = new Date(dateOfBirth);
+        let yearDob = dob.getFullYear();
+        let monthDob = dob.getMonth() + 1;
+        let dayDob = dob.getDate();
 
+        let yearNow = new Date().getFullYear();
+        let monthNow = new Date().getMonth() + 1;
+        let dayNow = new Date().getDate();
+        if (monthNow === monthDob && dayNow < dayDob || monthNow < monthDob) {
+            return yearNow - yearDob - 1;
+        } else {
+            return yearNow - yearDob;
+        }
+    }
 }
