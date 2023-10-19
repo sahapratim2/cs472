@@ -1,0 +1,8 @@
+Question1: Write the necessary Node script to make this code work for all arrays: [1,2,3,4,5,6,7,8].even(); // [2,4,6,8] and [1,2,3,4,5,6,7,8].odd(); // [1,3,5,7]. Test your code in Node.JS CLI.
+
+
+Question2: Create a web server and
+
+If the path is ‘/image’, send a response of an image to any client. Set an appropriate content-type for your image.
+If the path is ‘/pdf’, send a response of a pdf file to any client. Set a Content-type as "application/pdf".
+If the path is ‘/home’, send “Welcome to my website” text to any client.
