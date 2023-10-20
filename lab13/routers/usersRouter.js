@@ -4,8 +4,7 @@ const path = require('path');
 
 
 router.get('/',function(req,res){
-    console.log(__dirname);
-    res.sendFile(path.join(__dirname+'../../view/'+'users.html')); 
+    res.sendFile(path.join(__dirname+'/../view/'+'users.html')); 
 });
 
 router.post('/', express.urlencoded({ extended: true }), (req, res, next) => {
