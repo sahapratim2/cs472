@@ -28,16 +28,16 @@ let controller = {
         }
     },
     getUser: function (req, res, next) {
-  
-            let { userName, password } = req.body;
-            let user = User.login(userName, password)
-            if (user) {
-                res.status(200).json(user);
-            }
-            else {
-                res.status(403).json({ message: "Invalid username or password!" });
-            }
-     
+
+        let { userName, password } = req.body;
+        let user = User.login(userName, password)
+        if (user) {
+            res.status(200).json(user);
+        }
+        else {
+            res.status(403).json({ message: "Invalid username or password!" });
+        }
+
     },
     getUserByParameter: function (req, res, next) {
         const token = req.get("Authorization");
@@ -60,9 +60,9 @@ let controller = {
 
         const token = req.get("Authorization");
         if (token) {
-            let { firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password,isAdmin } = req.body;
+            let { firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password, isAdmin } = req.body;
             if (firstName && phoneNumber && email) {
-                let newUser = new User(firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password,isAdmin);
+                let newUser = new User(firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password, isAdmin);
                 let user = newUser.create();
                 if (user) {
                     res.status(201).json(user);
@@ -85,14 +85,21 @@ let controller = {
         const token = req.get("Authorization");
         if (token) {
             let userId = req.params.userId;
-            let { firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password,isAdmin } = req.body;
+            let { firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password, isAdmin } = req.body;
             if (userId && firstName && phoneNumber && email) {
-                let updateUser = new User(firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password,isAdmin);
-                 updateUser.update(userId)
-                res.status(200).json(updateUser);
-               
-            }
+                let updateUser = new User(firstName, middleName, lastName, ssn, phoneNumber, email, address, userName, password, isAdmin);
+                let user = updateUser.update(userId)
 
+                if (user) {
+                    res.status(200).json(user);
+                }
+                else {
+                    res.status(400).json({ message: "User Name already Exists!!" });
+                }
+
+
+
+            }
         }
         else {
             res.status(401).json({ message: "Unauthorized Access" });

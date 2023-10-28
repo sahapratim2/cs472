@@ -220,7 +220,10 @@ document.getElementById('btnSearch').addEventListener('click', function (event) 
 })
 
 ddlCustomer.addEventListener('change', function (event) {
-    getCustomer();
+    if (ddlCustomer.value != undefined && ddlCustomer.value != null && ddlCustomer.value != '' && ddlCustomer.value !='null') {
+        getCustomer();
+    }
+   
 })
 
 async function getCustomer() {
