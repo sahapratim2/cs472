@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Banka</title>
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/styles.css" type="text/css" rel="stylesheet">
+   
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <p class="logo"><span>Micro </span> Banka</p>
+                </a>
+
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </div>
+                    <div class="navbar-nav  mb-2 mb-lg-0">
+                        <form id="login-form" method="POST">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" name="userName" id="userName"
+                                        placeholder="User Name" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="password" name="password" id="password"
+                                        placeholder="password" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input  id="login-button" value="Log In" type="submit" class="btn btn-success btn-inline">
+                                </div>
+                                <button id='btnLogout' class="btn btn-white" type="submit">Sign Out</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <script src="assets/script/common.js"></script>
+        <script src="assets/script/index.js"></script>
+    </header>
+    <div id="content">
+        <div id="welcome-container">
+            
+            <p>Welcome to</p>
+            <p class="heading">Micro Banka!</p>
+            <div class="clipping-path"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="logo"><span>Micro </span> Banka</p>
+        <div>
+            <p>Developed for Web Application Programming Course</p>
+            <p>&copy; No Copyright, No Right Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

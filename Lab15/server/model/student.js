@@ -2,7 +2,6 @@ const students = [
 { id: 616410,fullName: 'Anna Johns', program: 'Compro'},
 { id: 616411,fullName: 'Partha', program: 'MBA'},
 { id: 616412,fullName: 'Pratim', program: 'Compro'}];
-
 class Student{
     constructor(id, fullName, program)
     {

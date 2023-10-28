@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Banka</title>
+    <link href="../assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../assets/css/styles.css" type="text/css" rel="stylesheet">
+    <script src="../assets/script/bootstrap.bundle.min.js"></script>
+
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <p class="logo"><span>Micro </span> Banka</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="menuList" class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li id="liHome" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li id="liCustomer" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="customer.html">Customer Information</a>
+                            </li>
+                            <li id="liAccount" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="account.html">Account</a>
+                            </li>
+                            <li id="liDeposit" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: 1em; padding-right: 1em;">
+                                <a class="nav-link" href="deposit.html">Deposit</a>
+                            </li>
+                            <li id="liWithdraw" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="withdraw.html">Withdraw</a>
+                            </li>
+                            <li id="liTransfer" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="transfer.html">Transfer</a>
+                            </li>
+                            <li id="liStatement" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="statement.html">Statement</a>
+                            </li>
+                        </ul>
+
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a id="lgnUserName" class="nav-link active" aria-current="page" href="#">Hello!</a>
+                        </li>
+                    </ul>
+                    <button id='btnLogout' class="btn btn-white" style="color: white; font-size: 18px;"
+                        type="submit">Sign Out</button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div id="content">
+        <div id="welcome-container">
+            <div class="container pt-5">
+                <h3>
+                    Customer Information
+                </h3>
+                <hr>
+                <legend></legend>
+
+                <form id="frmCustomer" action="" method="post">
+                    <fieldset>
+                        <div id="divSearch" class="row border border-info" style="padding-bottom: 10px;">
+                            <div class="col-md-3 mt-4">
+                                <div class="form-group">
+                                    <label for="ddlCustomer">Customer</label>
+                                    <select class="form-control" name="ddlCustomer" id="ddlCustomer"">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="ddlSearchBy">Search by</label>
+                                            <select class="form-control" name="ddlSearchBy" id="ddlSearchBy"">
+                                        <option>Name</option>
+                                        <option>Phone</option>
+                                        <option>Email</option>
+                                        <option>User</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-3 mt-4">
+                                                <div class="form-group">
+                                                    <label for="searchValue">Search Value</label>
+                                                    <input class="form-control" type="text" name="searchValue"
+                                                        id="searchValue" placeholder="Search Value" autofocus>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-3 mt-5">
+                                            <div class="form-group">
+                                                <button style="padding: .5em 1em;" id="btnSearch" type="submit"
+                                                    class="btn btn-info btn-inline">Search</button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input class="form-control" type="text" name="firstName" id="firstName"
+                                                placeholder="First Name" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="middleName">Middle Name</label>
+                                            <input class="form-control" type="text" name="middleName" id="middleName"
+                                                placeholder="Middle Name" autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input class="form-control" type="text" name="lastName" id="lastName"
+                                                placeholder="Last Name" required autofocus>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="ssn">Social Secuirity Number *</label>
+                                            <input class="form-control" type="text" name="ssn" id="ssn"
+                                                placeholder="Social Secuirity Number" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="phoneNumber">Phone Number *</label>
+                                            <input class="form-control" type="text" name="phoneNumber" id="phoneNumber"
+                                                placeholder="Phone Numbe" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="email">Email *</label>
+                                            <input class="form-control" type="email" name="email" id="email"
+                                                placeholder="Email" required autofocus>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="address">Address *</label>
+                                            <textarea class="form-control" name="address" id="address"
+                                                placeholder="Address" rows="1" required autofocus></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="userName">User Name *</label>
+                                            <input class="form-control" type="text" name="userName" id="userName"
+                                                placeholder="User Name" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <label for="password">Password *</label>
+                                            <input class="form-control" type="password" name="password" id="password"
+                                                placeholder="Password" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mt-4">
+                                        <div class="form-group">
+                                            <input style="vertical-align: middle;" type="checkbox" name="chkShowOutPatients" id="isAdmin" value="isAdmin">
+                                            <label for="password">Admin?</label>
+                               
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="divButton"  class="row">
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                    <div style="text-align: right;" class="col-md-6 mt-4">
+                                        <button style="padding: .5em 1em;" id="btnSubmit" type="submit"
+                                            class="btn btn-primary btn-inline">Submit</button>
+                                        <button style="margin-left: 1em; padding: .5em 1.3em;" id="btnReset"
+                                            type="reset" class="btn btn-secondary btn-inline">Reset</button>
+                                        <button style="margin-left: 1em; padding: .5em 1em;" id="btnUpdate" type="submit"
+                                            class="btn btn-warning btn-inline">Update</button>
+                                        <button style="margin-left: 1em; padding: .5em 1em;" id="btnDelete" type="submit"
+                                            class="btn btn-danger btn-inline">Delete</button>
+                                    </div>
+                                </div>
+                                <script src="../assets/script/customer.js"></script>
+                                <script src="../assets/script/common.js"></script>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="logo"><span>Micro </span> Banka</p>
+        <div>
+            <p>Developed for Web Application Programming Course</p>
+            <p>&copy; No Copyright, No Right Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

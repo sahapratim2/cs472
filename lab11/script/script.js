@@ -4,6 +4,7 @@ document.getElementById("btnRegisterPatient").addEventListener("click", function
     let tr = document.createElement('tr');
     patientsInfo.forEach(info=> tr.appendChild(createTD(info)));
     table.appendChild(tr);
+    createDrp();
     event.preventDefault()
 });
 document.getElementById("chkElderlyPatients").addEventListener("click", function () {
@@ -104,4 +105,14 @@ function getAge(dateOfBirth) {
             return yearNow - yearDob;
         }
     }
+}
+
+function createTD(vaue) {
+    let table = document.getElementById("tbodyPatientsList")
+    let tr = document.createElement('tr');
+    table.appendChild(tr);
+    let td = document.createElement('td');
+    td.innerHTML = "value";
+    tr.appendChild(td);
+    //tr.className="d-none"; 
 }

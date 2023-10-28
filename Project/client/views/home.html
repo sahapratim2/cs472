@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Banka</title>
+    <link href="../assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../assets/css/styles.css" type="text/css" rel="stylesheet">
+    <script src="../assets/script/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <p class="logo"><span>Micro </span> Banka</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="menuList" class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li id="liHome" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li id="liCustomer" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="customer.html">Customer Information</a>
+                            </li>
+                            <li id="liAccount" class="nav-item"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="account.html">Account</a>
+                            </li>
+                            <li id="liDeposit" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: 1em; padding-right: 1em;">
+                                <a class="nav-link" href="deposit.html">Deposit</a>
+                            </li>
+                            <li id="liWithdraw" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="withdraw.html">Withdraw</a>
+                            </li>
+                            <li id="liTransfer" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="transfer.html">Transfer</a>
+                            </li>
+                            <li id="liStatement" class="nav-item active"
+                                style="border-left: white 1px solid; padding-left: .5em; padding-right: .5em;">
+                                <a class="nav-link" href="statement.html">Statement</a>
+                            </li>
+                        </ul>
+
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a id="lgnUserName" class="nav-link active" aria-current="page" href="#">Hello!</a>
+                        </li>
+                    </ul>
+                    <button id='btnLogout' class="btn btn-white" style="color: white; font-size: 18px;"
+                        type="submit">Sign Out</button>
+                </div>
+            </div>
+        </nav>
+        <script src="../assets/script/common.js"></script>
+        <script src="../assets/script/home.js"></script>
+    </header>
+    <div id="content">
+        <div id="welcome-container">
+
+            <div class="container pt-5">
+                <h3>
+                    My Balance
+                </h3>
+                <hr>
+                <div style="margin-top: 1em;" style="font-size: 1em">
+                    <div id="divStatemant" class="row">
+                        <div class="col-md-4 mt-4">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" scope="col">Account</th>
+                                        <th class="text-center" scope="col">Account Type</th>
+                                        <th class="text-end" scope="col">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyStatement">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div id="divSubmit" style="text-align: right; display: none;" class="col-md-6 mt-4">
+                        <button style="padding: .5em 1em; " id="btnSubmit" type="submit"
+                            class="btn btn-secondary btn-inline">Print</button>
+                    </div>
+                </div>
+
+                <script src="../assets/script/home.js"></script>
+                <script src="../assets/script/common.js"></script>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="logo"><span>Micro </span> Banka</p>
+        <div>
+            <p>Developed for Web Application Programming Course</p>
+            <p>&copy; No Copyright, No Right Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

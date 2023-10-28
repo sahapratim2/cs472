@@ -11,31 +11,9 @@ async function display() {
             addDropDownOption(e.id, e.fullName,e.program,ddlStudentForUpdate);
             addDropDownOption(e.id, e.fullName,e.program,ddlStudent);
         }
-
     }
     else alert("Error" + response.status);
 }
-
-function addRowToTable(id, fullName, program) {
-    let row = document.createElement('tr');
-    row.setAttribute("id", id);
-    for (let e of arguments) {
-        let cell = document.createElement('td');
-        cell.appendChild(document.createTextNode(e));
-        row.appendChild(cell);
-    }
-    document.getElementById('tbodyStudentList').appendChild(row);
-}
-function addDropDownOption(id, fullName,program,ddl) {
-    let option = document.createElement("option");
-    option.text=fullName;
-    option.id=id;
-    option.value=id;
-    option.desc=program;
-    ddl.add(option);
-  
-}
-
 async function addStudent(id, fullName, program) {
     let obj = { id, fullName, program };
     let setting = {
@@ -49,44 +27,7 @@ async function addStudent(id, fullName, program) {
         addDropDownOption(id, fullName,program,ddlStudentForUpdate);
         addDropDownOption(id, fullName,program,ddlStudent);
     } else alert("Error " + response.status);
-
 }
-
-document.getElementById('btnRegister').addEventListener("click", () => {
-    let id = document.getElementById('id').value;
-    let fullName = document.getElementById('name').value;
-    let program = document.getElementById('program').value;
-    addStudent(id, fullName, program);
-    document.getElementById('myform').reset()
-});
-
-document.getElementById('btnDelete').addEventListener("click", () => {
-    let id=document.querySelector('#ddlStudent').value;
-    if(id!='Select')
-    {
-        deleteStudent(id);
-    }
-    else
-    {
-        alert("Select a Student!!!");
-    }
-    
-});
-
-async function deleteStudent(id) {
-    let setting = {
-        method: "DELETE"
-    }
-    let response = await fetch("http://localhost:5000/students/"+id, setting);
-    if (response.ok) {
-        let ddl=document.querySelector('#ddlStudent');
-        document.querySelector('#ddlStudentForUpdate').remove(ddl.selectedIndex);
-        ddl.remove(ddl.selectedIndex)
-        document.getElementById(id).remove();
-    } 
-    else alert("Error " + response.status);
-}
-
 async function updateStudent(id, fullName, program) {
     let obj = { id, fullName, program };
     let setting = {
@@ -109,8 +50,60 @@ async function updateStudent(id, fullName, program) {
         document.getElementById('myform').reset();
       
     } else alert("Error " + response.status);
-
 }
+async function deleteStudent(id) {
+    let setting = {
+        method: "DELETE"
+    }
+    let response = await fetch("http://localhost:5000/students/"+id, setting);
+    if (response.ok) {
+        let ddl=document.querySelector('#ddlStudent');
+        document.querySelector('#ddlStudentForUpdate').remove(ddl.selectedIndex);
+        ddl.remove(ddl.selectedIndex)
+        document.getElementById(id).remove();
+    } 
+    else alert("Error " + response.status);
+}
+function addRowToTable(id, fullName, program) {
+    let row = document.createElement('tr');
+    row.setAttribute("id", id);
+    for (let e of arguments) {
+        let cell = document.createElement('td');
+        cell.appendChild(document.createTextNode(e));
+        row.appendChild(cell);
+    }
+    document.getElementById('tbodyStudentList').appendChild(row);
+}
+function addDropDownOption(id, fullName,program,ddl) {
+    let option = document.createElement("option");
+    option.text=fullName;
+    option.id=id;
+    option.value=id;
+    option.desc=program;
+    ddl.add(option);
+  }
+
+document.getElementById('btnRegister').addEventListener("click", () => {
+    let id = document.getElementById('id').value;
+    let fullName = document.getElementById('name').value;
+    let program = document.getElementById('program').value;
+    addStudent(id, fullName, program);
+    document.getElementById('myform').reset()
+});
+document.getElementById('btnDelete').addEventListener("click", () => {
+    let id=document.querySelector('#ddlStudent').value;
+    if(id!='Select')
+    {
+        deleteStudent(id);
+    }
+    else
+    {
+        alert("Select a Student!!!");
+    }
+    
+});
+
+
 
 document.getElementById('btnUpdate').addEventListener("click", () => {
 

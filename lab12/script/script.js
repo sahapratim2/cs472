@@ -19,7 +19,7 @@ console.log(testArray.odd()); // [1, 3, 5, 7]
 
 const http = require("http");
 const fs = require("fs");
-const { resolve } = require("path");
+// const { resolve } = require("path");
 
 const server = http.createServer((request, response) => {
     let path = request.url;
